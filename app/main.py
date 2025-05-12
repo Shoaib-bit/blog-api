@@ -1,7 +1,8 @@
 from fastapi import FastAPI
-from typing import Optional
-from pydantic import BaseModel
+from routes.blog_route import router as blog_route
 
 app = FastAPI()
+
+app.include_router(blog_route)
 
 
